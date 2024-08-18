@@ -1,0 +1,19 @@
+{
+    "liveServer.settings.port": 5500,
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "/"
+        }
+    ],
+    "editor.tabSize": 4,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 1,
+    "editor.formatOnSave": true
+}
