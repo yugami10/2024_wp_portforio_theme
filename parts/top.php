@@ -9,8 +9,8 @@
         </div>
     </div>
 
-    <div class="content_wrapper">
-        <section class="ability section-wrapper">
+    <div class="section-wrapper">
+        <section class="ability section-self-style">
             <h2 class="section-title">できること</h2>
             <div>
                 <p>
