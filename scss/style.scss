@@ -81,3 +81,30 @@ img {
         }
     }
 }
+
+.main_visual {
+    background: linear-gradient(#FAE2BE, #62C7C7);
+    height: 800px;
+
+    &__img {
+        height: inherit;
+        background-image: url('images/AdobeStock_499810702.png');
+        background-size: contain;
+        background-repeat: repeat;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__message {
+        background: linear-gradient(90deg, #C36717, #AA2EC9);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        text-align: center;
+        font-size: 56px;
+        font-weight: bold;
+        line-height: 3em;
+    }
+}
