@@ -8,3 +8,17 @@ function my_enqueue_styles()
 }
 
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
+
+/** 以下、wpとは関係ない関数 */
+
+/**
+ * ボタンのtemplareを読み込む
+ *
+ * @param string $url
+ * @param string $text
+ * @return void
+ */
+function includeButton(string $url, string $text)
+{
+	include __DIR__ . '/parts/common/button.php';
+}

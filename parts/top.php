@@ -19,9 +19,7 @@
                     お気軽にお問い合わせください。
                 </p>
             </div>
-            <div class="button button-margin">
-                <a href="<?= home_url('contact') ?>">問い合わせてみる</a>
-            </div>
+            <?= includeButton(home_url('contact'), '問い合わせてみる') ?>
         </section>
     </div>
 </main>
