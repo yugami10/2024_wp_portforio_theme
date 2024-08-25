@@ -37,9 +37,47 @@ img {
         ul {
             display: flex;
             li {
-                padding: 10px 20px;
-                border-bottom: solid 1px #62C7C7;
+                padding: 10px;
                 font-weight: bold;
+
+                &:has(a) {
+                    a {
+                        position: relative;
+                        padding: 0 10px;
+                        opacity: .4;
+
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0;
+                            height: 1px;
+                            width: 100%;
+                            background-color: #62C7C7;
+
+                            transform: scale(0, 1);
+                            transform-origin: right top;
+                            transition: transform 0.5s;
+                        }
+
+                        &:hover {
+                            opacity: .7;
+
+                            &::after {
+                                transform: scale(1, 1);
+                                transform-origin: left top;
+                            }
+                        }
+                    }
+                }
+
+                &:not(:has(a)) {
+                    color: black;
+
+                    span {
+                        padding: 0 10px;
+                    }
+                }
             }
         }
     }

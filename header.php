@@ -14,15 +14,25 @@
 
 <header class="header">
     <div class="header__img_wrapper">
-        <img src="<?= get_template_directory_uri() ?>/images/logo.png" alt="logo" />
+        <a href="<?= home_url() ?>">
+            <img src="<?= get_template_directory_uri() ?>/images/logo.png" alt="logo" />
+        </a>
     </div>
     <nav class="header__nav">
         <ul>
             <li>
-                <a href="<?= home_url('result') ?>">実績</a>
+                <?php if (is_page('result')) : ?>
+                    <span>実績</span>
+                <?php else : ?>
+                    <a href="<?= home_url('result') ?>">実績</a>
+                <?php endif; ?>
             </li>
             <li>
-                <a href="<?= home_url('contact') ?>"">お問い合わせ</a>
+                <?php if (is_page('contact')) : ?>
+                    <span>お問い合わせ</span>
+                <?php else : ?>
+                    <a href="<?= home_url('contact') ?>">お問い合わせ</a>
+                <?php endif; ?>
             </li>
         </ul>
     </nav>
