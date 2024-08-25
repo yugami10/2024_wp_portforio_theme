@@ -8,4 +8,20 @@
             </p>
         </div>
     </div>
+
+    <div class="content_wrapper">
+        <section class="ability section-wrapper">
+            <h2 class="section-title">できること</h2>
+            <div>
+                <p>
+                    HPの作成・wordpressの改修・webアプリの作成が出来ます。
+                    <br />
+                    お気軽にお問い合わせください。
+                </p>
+            </div>
+            <div class="button button-margin">
+                <a href="<?= home_url('contact') ?>">問い合わせてみる</a>
+            </div>
+        </section>
+    </div>
 </main>

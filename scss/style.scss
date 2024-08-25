@@ -20,6 +20,29 @@ img {
     object-fit: cover;
 }
 
+.button {
+    padding: 20px 40px;
+    background-color: #C84C67;
+    border-radius: 30px;
+    display: inline-block;
+
+    &-margin {
+        margin: 30px;
+    }
+}
+
+h2.section-title {
+    font-size: 32px;
+    font-weight: bold;
+    padding: 20px;
+}
+.section-wrapper {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -106,5 +129,17 @@ img {
         font-size: 56px;
         font-weight: bold;
         line-height: 3em;
+    }
+}
+
+.content_wrapper {
+    background: linear-gradient(#62C7C7, #0F73C0);
+    color: #fff;
+}
+
+.ability {
+    p {
+        display: inline-block;
+        text-align: left;
     }
 }
