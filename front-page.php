@@ -1,11 +1,11 @@
 <?= get_header() ?>
 
+<main>
+    <?= includeMainVisual() ?>
 
-<?php
-
-// トップページ読み込み
-include_once __DIR__ . '/parts/top.php';
-
-?>
+    <div class="section-wrapper">
+        <?= includeAbilistySection() ?>
+    </div>
+</main>
 
 <?= get_footer() ?>

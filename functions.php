@@ -12,6 +12,25 @@ add_action('wp_enqueue_scripts', 'my_enqueue_styles');
 /** 以下、wpとは関係ない関数 */
 
 /**
+ * メインビジュアルを読み込む
+ *
+ * @return void
+ */
+function includeMainVisual()
+{
+	include __DIR__ . '/page/front_page/main_visual.php';
+}
+
+/**
+ * できることを読み込む
+ *
+ * @return void
+ */
+function includeAbilistySection()
+{
+	include __DIR__ . '/page/front_page/ability.php';
+}
+/**
  * ボタンのtemplareを読み込む
  *
  * @param string $url
