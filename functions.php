@@ -30,6 +30,37 @@ function includeAbilistySection()
 {
 	include __DIR__ . '/page/front_page/ability.php';
 }
+
+/**
+ * 実績を読み込む
+ *
+ * @return void
+ */
+function includeResultSection()
+{
+	include __DIR__ . '/page/front_page/result.php';
+}
+
+/**
+ * 自己紹介を読み込む
+ *
+ * @return void
+ */
+function includeSelfIntroductionSection()
+{
+	include __DIR__ . '/page/front_page/self_introduction.php';
+}
+
+/**
+ * ご依頼についてを読み込む
+ *
+ * @return void
+ */
+function includeContactSection()
+{
+	include __DIR__ . '/page/front_page/contact.php';
+}
+
 /**
  * ボタンのtemplareを読み込む
  *
