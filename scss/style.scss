@@ -169,3 +169,12 @@ h2.section-title {
         width: 30%;
     }
 }
+
+.footer {
+    background-color: #0F73C0;
+
+    &__content {
+        text-align: center;
+        color: #fff;
+    }
+}
