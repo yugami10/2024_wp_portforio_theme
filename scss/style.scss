@@ -145,3 +145,10 @@ h2.section-title {
         text-align: left;
     }
 }
+
+// 実績
+.result {
+    &__list {
+        display: flex;
+    }
+}
