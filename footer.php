@@ -6,8 +6,10 @@
     <!-- <div class="footer__right_pictures"></div> -->
 </footer>
 
-
-<?php
-// 固定ページか判定(トップページと固定ページで色変えたいなと)
-$page = is_page();
-?>
+<script>
+    // 固定ページか判定(トップページと固定ページで色変えたいなと)
+    const page = '<?= is_page() ?>'
+    if (page) {
+        document.querySelector('.footer').classList.add('static_page')
+    }
+</script>
