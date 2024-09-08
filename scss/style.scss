@@ -128,10 +128,18 @@ h2.section-title {
     font-weight: bold;
     padding: 20px;
 }
-.section-self-style {
+.text-align-center {
+    text-align: center;
+}
+.section-self-style,
+.section-self-style-left
+{
     text-align: center;
     max-width: 1000px;
     margin: 0 auto;
+}
+.section-self-style-left {
+    text-align: left;
 }
 .section-wrapper {
     background: linear-gradient(#62C7C7, #0F73C0);
@@ -148,8 +156,36 @@ h2.section-title {
 
 // 実績
 .result {
+    max-width: 1000px;
+
     &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    &__item {
+        border: solid 1px #7EADD1;
+        box-shadow: 2px 2px 4px 0 rgb(15, 87, 142, 50);
+        border-radius: 10px;
+        padding: 20px;
+    }
+
+    &__item_img_wrapper {
+    }
+
+    &__item_explains {
         display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+        font-weight: bold;
+
+        dt {
+            width: 40%;
+        }
+        dd {
+            width: 60%;
+        }
     }
 }
 
@@ -183,4 +219,9 @@ h2.section-title {
         text-align: center;
         color: #fff;
     }
+}
+
+// 投稿ページのmain
+.main_archive {
+    background: linear-gradient(#FAE2BE, #62C7C7);
 }

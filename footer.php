@@ -7,9 +7,10 @@
 </footer>
 
 <script>
-    // 固定ページか判定(トップページと固定ページで色変えたいなと)
+    // 固定ページ・投稿ページか判定(トップページと他のページで色変えたいなと)
     const page = '<?= is_page() ?>'
-    if (page) {
+    const archive = '<?= is_archive() ?>'
+    if (page || archive) {
         document.querySelector('.footer').classList.add('static_page')
     }
 </script>

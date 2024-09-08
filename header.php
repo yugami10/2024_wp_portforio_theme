@@ -21,10 +21,10 @@
     <nav class="header__nav">
         <ul>
             <li>
-                <?php if (is_page('result')) : ?>
+                <?php if (is_archive('results')) : ?>
                     <span>実績</span>
                 <?php else : ?>
-                    <a href="<?= home_url('result') ?>">実績</a>
+                    <a href="<?= home_url('results') ?>">実績</a>
                 <?php endif; ?>
             </li>
             <li>

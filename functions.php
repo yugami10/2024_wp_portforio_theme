@@ -1,7 +1,8 @@
 <?php
 
+add_theme_support('post-thumbnails');
 
-function my_enqueue_styles()
+function my_enqueue_styles(): void
 {
 	wp_enqueue_style('destyle', get_stylesheet_directory_uri() . '/destyle.css');
 	wp_enqueue_style('style', get_stylesheet_uri(), ['destyle'], false, 'all');
