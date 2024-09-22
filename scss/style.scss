@@ -22,6 +22,8 @@ body {
 // 画面を縦に大きくしたときに謎の余白をうまないため
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -155,6 +157,7 @@ h2.section-title {
 .section-wrapper {
     background: linear-gradient(#62C7C7, #0F73C0);
     color: #fff;
+    flex: 1;
 }
 
 // できること
