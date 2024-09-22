@@ -1,3 +1,5 @@
+<?= wp_footer() ?>
+
 <footer class="footer">
     <!-- <div class="footer__left_pictures"></div> -->
     <div class="footer__content">

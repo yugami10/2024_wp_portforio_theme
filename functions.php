@@ -2,6 +2,15 @@
 
 add_theme_support('post-thumbnails');
 
+/*
+ * contact-form-7プラグインのpタグ自動追加判定関数を常にfalseにする対応
+ * wp-config.phpでも可能だがプラグインのバージョンアップの影響を受けやすそうなため一旦こちらで。。
+ * (結局バージョンアップの影響を受けないファイるっぽいから意味なかったけど...)
+ * https://github.com/rocklobster-in/contact-form-7/compare/v5.8.5%E2%80%A6v5.8.6
+ */
+remove_filter('wpcf7_autop_or_not', 'wpcf7_autop_or_not');
+add_filter( 'wpcf7_autop_or_not', fn () => false);
+
 function my_enqueue_styles(): void
 {
 	wp_enqueue_style('destyle', get_stylesheet_directory_uri() . '/destyle.css');
