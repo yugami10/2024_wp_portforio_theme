@@ -15,6 +15,10 @@ function my_enqueue_styles(): void
 {
 	wp_enqueue_style('destyle', get_stylesheet_directory_uri() . '/destyle.css');
 	wp_enqueue_style('style', get_stylesheet_uri(), ['destyle'], false, 'all');
+
+	if (is_front_page()) {
+		wp_enqueue_script_module('loading', get_template_directory_uri().'/dist/loading.js', [], []);
+	}
 }
 
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
