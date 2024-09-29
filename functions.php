@@ -16,9 +16,15 @@ function my_enqueue_styles(): void
 	wp_enqueue_style('destyle', get_stylesheet_directory_uri() . '/destyle.css');
 	wp_enqueue_style('style', get_stylesheet_uri(), ['destyle'], false, 'all');
 
+	// gsap library
+    wp_enqueue_script( 'gsap-js', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js', array(), false, true );
+    wp_enqueue_script( 'gsap-st', 'https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js', array('gsap-js'), false, true );
+    wp_enqueue_script( 'gsap-js2', get_template_directory_uri() . '/dist/gsap.js', array('gsap-js'), false, true );
+
 	if (is_front_page()) {
 		wp_enqueue_script_module('loading', get_template_directory_uri().'/dist/loading.js', [], []);
 	}
+	wp_enqueue_script_module('main', get_template_directory_uri().'/dist/main.js', [], []);
 }
 
 add_action('wp_enqueue_scripts', 'my_enqueue_styles');
@@ -74,6 +80,25 @@ function includeContactSection()
 {
 	include __DIR__ . '/page/front_page/contact.php';
 }
+
+/**
+ * ローディングページを読み込む
+ *
+ * @return void
+ */
+/**
+ * ローディングページを読み込む
+ *
+ * @param boolean $is_display
+ * @return void
+ */
+function includeLoading(bool $is_display = true)
+{
+	if ($is_display) {
+		include __DIR__ . '/page/front_page/loading.php';
+	}
+}
+
 
 /**
  * ボタンのtemplareを読み込む

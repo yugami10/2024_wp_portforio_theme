@@ -335,3 +335,44 @@ h2.section-title {
     font: var(--fa-font-solid);
     content: "\f071";
 }
+
+// 練習用
+.vertical-content {
+    height: 200vh; /* ページを縦に長くする */
+}
+
+.horizontal-content {
+    position: sticky;
+    top: 50%; /* 縦スクロール中も要素が表示される位置 */
+    background-color: lightblue;
+    padding: 20px;
+}
+
+// わかめ...
+.wakame-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+
+    position: sticky;
+    bottom: 0;
+
+    .wakame-wrapper {
+        height: 200px;
+        width: 200px;
+
+        img{
+            transform-origin: center bottom;
+            animation: yurayura 2s linear infinite;
+        }
+
+        @keyframes yurayura {
+          0% , 100%{
+              transform: rotate(10deg);
+          }
+          50%{
+              transform: rotate(-10deg);
+          }
+        }
+    }
+}
