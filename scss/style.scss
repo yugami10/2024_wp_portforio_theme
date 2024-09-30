@@ -150,6 +150,10 @@ h2.section-title {
     max-width: 1000px;
     margin: 0 auto;
 }
+.section-self-style {
+    // 横スクロールの重複用
+    position: relative;
+}
 .section-self-style-left {
     text-align: left;
 }
@@ -336,7 +340,7 @@ h2.section-title {
     content: "\f071";
 }
 
-// 練習用
+/** gsap の練習用css **/
 .vertical-content {
     height: 200vh; /* ページを縦に長くする */
 }
@@ -347,8 +351,20 @@ h2.section-title {
     background-color: lightblue;
     padding: 20px;
 }
+/** gsap の練習用css **/
 
-// わかめ...
+.kurage-wrapper,
+.kurage-wrapper-right {
+    height: 100px;
+    width: 100px;
+
+    position: absolute;
+}
+.kurage-wrapper-right {
+    right: 0;
+}
+
+// なぜかうまくいったわかめ。。。ただ、海底ではなく海中に常にいていいのか怪しい。。。
 .wakame-group {
     display: flex;
     justify-content: space-between;
