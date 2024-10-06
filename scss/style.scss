@@ -16,6 +16,12 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+
+    // gsapアニメーションの要素が画面外に移動した時、スクロールバーを非表示
+    overflow-x: hidden;
+
+    // <header>の代わりに最下層に生地を敷き詰める
+    background-color: #FAE2BE;
 }
 
 // 画面を縦に大きくしたときに謎の余白をうまないため
@@ -23,6 +29,9 @@ main {
     flex: 1;
     display: flex;
     flex-direction: column;
+
+    // <header>にfixedを使うと他の要素と重なるため、headerの高さ分の場所を確保
+    margin-top: 80px;
 }
 
 img {
@@ -43,13 +52,18 @@ img {
 }
 
 // ヘッダー
+header {
+    position: fixed;
+    top: 0;
+}
 .header {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
     padding: 20px 40px;
-    background-color: #FAE2BE;
-    width: 100%;
+    // background-color: #FAE2BE;
+    width: 100vw;
+    height: 80px;
 
     &__img_wrapper {
         display: inline-block;
@@ -219,7 +233,8 @@ h2.section-title {
     }
 
     &__self_picture_wrapper {
-        width: 30%;
+        // width: 30%;
+        width: 256px;
     }
 }
 
