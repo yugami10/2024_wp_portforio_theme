@@ -27,6 +27,11 @@
         <?= includeSelfIntroductionSection() ?><?php // 「自己紹介」セクション ?>
         <?= includeContactSection() ?><?php // 「お問い合わせ」セクション ?>
 
+        <!-- およぐおさかなくん -->
+        <div class="sakana-wrapper">
+            <img src="<?= get_template_directory_uri() . "/images/sakana.png" ?>" alt="泳ぐ魚" />
+        </div>
+
         <!-- わかめ？？？？？？？？？？ -->
         <div class="wakame-group">
             <?php for ($wakame_i = 0; $wakame_i < 2; $wakame_i++) : ?>

@@ -51,6 +51,16 @@ img {
     }
 }
 
+.reverse-x {
+    transform: scale(-1, 1);
+}
+.rotate90 {
+    transform: rotate(90deg);
+}
+.-rotate90 {
+    transform: rotate(-90deg);
+}
+
 // ヘッダー
 header {
     position: fixed;
@@ -175,6 +185,7 @@ h2.section-title {
     background: linear-gradient(#62C7C7, #0F73C0);
     color: #fff;
     flex: 1;
+    position: relative;
 }
 
 // できること
@@ -406,4 +417,10 @@ h2.section-title {
           }
         }
     }
+}
+
+.sakana-wrapper {
+    position: absolute;
+    top: 0;
+    width: 200px;
 }

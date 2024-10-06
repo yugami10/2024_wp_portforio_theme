@@ -38,3 +38,28 @@ kurager_right.fromTo(".kurage-wrapper-right", {
 }, {
     x: "-100vw"
 });
+
+const sakana_wrapper = document.querySelector('.sakana-wrapper')
+const sakana = document.querySelector('.sakana-wrapper img')
+
+const TL = gsap.timeline({repeat: -1})
+TL.add(() => {
+    sakana?.classList.add('reverse-x')
+})
+    .to(sakana_wrapper, {left: "calc(100vw - 200px)", duration: 1.5})
+    .add(() => {
+        sakana?.classList.add('-rotate90')
+    })
+    .to(sakana_wrapper, {top: "100vh", duration: 1.5})
+    .add(() => {
+        sakana?.classList.remove('-rotate90')
+        sakana?.classList.remove('reverse-x')
+    })
+    .to(sakana_wrapper, {left: "0vw", duration: 1.5})
+    .add(() => {
+        sakana?.classList.add('rotate90')
+    })
+    .to(sakana_wrapper, {top: "0vh", duration: 1.5})
+    .add(() => {
+        sakana?.classList.remove('rotate90')
+    })
