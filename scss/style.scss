@@ -1,8 +1,19 @@
 /*!
  * Theme Name: ぽーとふぉり男
  */
- @charset "UTF-8";
- @use "./loading";
+@charset "UTF-8";
+@use "./loading";
+
+// map
+$breakpoint: (
+    sp: 'screen and (max-width: 767px)',
+    pc: 'screen and (min-width: 767px)',
+);
+@mixin mq($bp) {
+    @media #{map-get($breakpoint, $bp)} {
+        @content;
+    }
+}
 
 // 共通css
 body {
