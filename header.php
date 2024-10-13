@@ -21,6 +21,11 @@
                 <img src="<?= get_template_directory_uri() ?>/images/logo.png" alt="logo" />
             </a>
         </div>
+        <div class="hamburger_menu">
+            <div class="hamburger_menu__line"></div>
+            <div class="hamburger_menu__line"></div>
+            <div class="hamburger_menu__line"></div>
+        </div>
         <nav class="header__nav">
             <ul>
                 <li>

@@ -2,17 +2,23 @@
  * Theme Name: ぽーとふぉり男
  */
 @charset "UTF-8";
+@use "./fontsize";
 @use "./loading";
 
 // map
 $breakpoint: (
-    sp: 'screen and (max-width: 767px)',
-    pc: 'screen and (min-width: 767px)',
+    sp: "screen and (max-width: 767px)",
+    pc: "screen and (min-width: 767px)",
 );
+
+
 @mixin mq($bp) {
     @media #{map-get($breakpoint, $bp)} {
         @content;
     }
+}
+@mixin sp_wrapper_p {
+    padding: 0 20px;
 }
 
 // 共通css
@@ -93,6 +99,9 @@ header {
     }
 
     &__nav {
+        @include mq(sp) {
+            display: none;
+        }
         ul {
             display: flex;
             li {
@@ -142,10 +151,60 @@ header {
     }
 }
 
+.hamburger_menu {
+    position: relative;
+    cursor: pointer;
+    width: 40px;
+    display: none;
+
+    @include mq(sp) {
+        display: revert;
+    }
+
+    &__line {
+        position: absolute;
+        border: solid 1px black;
+        height: 1px;
+        width: 100%;
+        transition: all  1s ease;
+
+        &:nth-child(1) {
+            top: 0;
+
+            .click & {
+                transform: translateY(19px) rotate(45deg);
+            }
+        }
+
+        &:nth-child(2) {
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            .click & {
+                opacity: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            bottom: 0;
+
+            .click & {
+                transform: translateY(-19px) rotate(135deg);
+            }
+        }
+    }
+}
+
+
 // 最初の画像
 .main_visual {
     background: linear-gradient(#FAE2BE, #62C7C7);
     height: 800px;
+
+    @include mq(sp) {
+        height: 560px
+    }
 
     &__img {
         height: inherit;
@@ -164,15 +223,20 @@ header {
         -webkit-text-fill-color: transparent;
 
         text-align: center;
-        font-size: 56px;
+        font-size: var(--ultra_big_big_font_size);
         font-weight: bold;
         line-height: 3em;
+
+        @include mq(sp) {
+            @include sp_wrapper_p;
+            font-size: var(--big_big_big_font_size);
+        }
     }
 }
 
 // セクション
 h2.section-title {
-    font-size: 32px;
+    font-size: var(--big_big_big_font_size);
     font-weight: bold;
     padding: 20px;
 }
@@ -198,6 +262,10 @@ h2.section-title {
     color: #fff;
     flex: 1;
     position: relative;
+
+    @include mq(sp) {
+        @include sp_wrapper_p;
+    }
 }
 
 // できること
@@ -216,6 +284,10 @@ h2.section-title {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+
+        @include mq(sp) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__item {
@@ -223,9 +295,6 @@ h2.section-title {
         box-shadow: 2px 2px 4px 0 rgb(15, 87, 142, 50);
         border-radius: 10px;
         padding: 20px;
-    }
-
-    &__item_img_wrapper {
     }
 
     &__item_explains {
@@ -246,18 +315,24 @@ h2.section-title {
 // 自己紹介
 .self-introduction {
     &__content_wrapper {
-        display: flex;
         justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        align-items: center;
+
+        @include mq(sp) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__content {
-        width: 60%;
         text-align: left;
     }
 
     &__self_picture_wrapper {
-        // width: 30%;
         width: 256px;
+        justify-self: center;
     }
 }
 
@@ -410,6 +485,10 @@ h2.section-title {
 
     position: sticky;
     bottom: 0;
+
+    @include mq(sp) {
+        padding: 0;
+    }
 
     .wakame-wrapper {
         height: 200px;
