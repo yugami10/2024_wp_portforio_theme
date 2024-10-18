@@ -21,6 +21,55 @@ $breakpoint: (
     padding: 0 20px;
 }
 
+@mixin nav_style {
+    ul {
+        display: flex;
+        li {
+            padding: 10px;
+            font-weight: bold;
+
+            &:has(a) {
+                a {
+                    position: relative;
+                    padding: 0 10px;
+                    opacity: .4;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        left: 0;
+                        height: 1px;
+                        width: 100%;
+                        background-color: #62C7C7;
+
+                        transform: scale(0, 1);
+                        transform-origin: right top;
+                        transition: transform 0.5s;
+                    }
+
+                    &:hover {
+                        opacity: .7;
+
+                        &::after {
+                            transform: scale(1, 1);
+                            transform-origin: left top;
+                        }
+                    }
+                }
+            }
+
+            &:not(:has(a)) {
+                color: black;
+
+                span {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
 // 共通css
 body {
     font-family: "Noto Sans JP", system-ui;
@@ -102,51 +151,49 @@ header {
         @include mq(sp) {
             display: none;
         }
+
+        @include nav_style;
+    }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0 !important;
+}
+
+.hamburger_modal {
+    background-color: black;
+    opacity: 0.3;
+    transition: all 1s ease;
+    width: 100vw;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+}
+
+.hamburger_content {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    background-color: #fff;
+    height: 100%;
+    max-width: 300px;
+    padding: 80px;
+    transition: all 1s ease;
+    transform: translateX(0);
+
+    &.hidden {
+        transform: translateX(100%);
+    }
+
+    .hamburger_nav {
+        @include nav_style;
+
         ul {
-            display: flex;
-            li {
-                padding: 10px;
-                font-weight: bold;
-
-                &:has(a) {
-                    a {
-                        position: relative;
-                        padding: 0 10px;
-                        opacity: .4;
-
-                        &::after {
-                            content: '';
-                            position: absolute;
-                            bottom: -10px;
-                            left: 0;
-                            height: 1px;
-                            width: 100%;
-                            background-color: #62C7C7;
-
-                            transform: scale(0, 1);
-                            transform-origin: right top;
-                            transition: transform 0.5s;
-                        }
-
-                        &:hover {
-                            opacity: .7;
-
-                            &::after {
-                                transform: scale(1, 1);
-                                transform-origin: left top;
-                            }
-                        }
-                    }
-                }
-
-                &:not(:has(a)) {
-                    color: black;
-
-                    span {
-                        padding: 0 10px;
-                    }
-                }
-            }
+            flex-direction: column;
+            row-gap: 20px;
         }
     }
 }
@@ -156,6 +203,7 @@ header {
     cursor: pointer;
     width: 40px;
     display: none;
+    z-index: 12;
 
     @include mq(sp) {
         display: revert;

@@ -26,7 +26,28 @@
             <div class="hamburger_menu__line"></div>
             <div class="hamburger_menu__line"></div>
         </div>
+        <div class="hamburger_modal hidden"></div>
         <nav class="header__nav">
+            <ul>
+                <li>
+                    <?php if (is_archive('results')) : ?>
+                        <span>実績</span>
+                    <?php else : ?>
+                        <a href="<?= home_url('results') ?>">実績</a>
+                    <?php endif; ?>
+                </li>
+                <li>
+                    <?php if (is_page('contact')) : ?>
+                        <span>お問い合わせ</span>
+                    <?php else : ?>
+                        <a href="<?= home_url('contact') ?>">お問い合わせ</a>
+                    <?php endif; ?>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="hamburger_content hidden">
+        <nav class="hamburger_nav">
             <ul>
                 <li>
                     <?php if (is_archive('results')) : ?>
