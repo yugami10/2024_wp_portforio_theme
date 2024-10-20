@@ -10,7 +10,7 @@
 <main>
     <?= includeMainVisual() ?><?php //メインビジュアル ?>
 
-    <div class="section-wrapper">
+    <div class="section-wrapper front-page-color">
         <!-- クラゲぷかぷか -->
         <div class="kurage-wrapper">
             <img src="<?= get_template_directory_uri() . "/images/kurage.png" ?>" alt="ぷかぷかするクラゲ" />

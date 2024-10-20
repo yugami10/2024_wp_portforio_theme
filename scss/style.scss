@@ -170,6 +170,10 @@ header {
     position: fixed;
     z-index: 10;
     inset: 0;
+
+    @include mq(pc) {
+        display: none;
+    }
 }
 
 .hamburger_content {
@@ -183,6 +187,10 @@ header {
     padding: 80px;
     transition: all 1s ease;
     transform: translateX(0);
+
+    @include mq(pc) {
+        display: none;
+    }
 
     &.hidden {
         transform: translateX(100%);
@@ -306,13 +314,20 @@ h2.section-title {
     text-align: left;
 }
 .section-wrapper {
-    background: linear-gradient(#62C7C7, #0F73C0);
-    color: #fff;
     flex: 1;
     position: relative;
 
     @include mq(sp) {
         @include sp_wrapper_p;
+    }
+
+    &.front-page-color {
+        background: linear-gradient(#62C7C7, #0F73C0);
+        color: #fff;
+    }
+
+    &.archive-page-color, &.page-color {
+        background: linear-gradient(#FAE2BE, #62C7C7);
     }
 }
 
@@ -401,7 +416,7 @@ h2.section-title {
 
 // 投稿ページのmain
 .main_archive, .main_contact {
-    background: linear-gradient(#FAE2BE, #62C7C7);
+
 }
 
 // contact form 7のクラス（inputやtextareaフォームの外についているspanタグのclass）
