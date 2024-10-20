@@ -431,16 +431,27 @@ h2.section-title {
 
     &_item {
         display: flex;
+        @include mq(sp) {
+            flex-direction: column;
+        }
 
         &__label {
             width: 40%;
             display: flex;
             align-items: top;
+            @include mq(sp) {
+                width: 100%;
+                min-height: 30px;
+            }
         }
         &__input {
             display: flex;
             align-items: flex-start;
             width: 60%;
+            @include mq(sp) {
+                align-items: center;
+                width: 100%;
+            }
 
             &_label {
                 min-width: 40px;

@@ -21,7 +21,9 @@
                 <!-- ループさせるコンテンツをここにいれる -->
                 <li class="result__item">
                     <figure class="result__item_img_wrapper">
-                        <img src="<?= the_field('site_top_img') ?>" alt="" />
+                        <a href="<?= the_field('url') ?>" target="_blank">
+                            <img src="<?= the_field('site_top_img') ?>" alt="" />
+                        </a>
                     </figure>
                     <dl class="result__item_explains">
                         <dt>担当作業</dt>
