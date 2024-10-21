@@ -98,6 +98,8 @@ main {
 
     // <header>にfixedを使うと他の要素と重なるため、headerの高さ分の場所を確保
     margin-top: 80px;
+
+    z-index: 0;
 }
 
 img {
@@ -111,6 +113,8 @@ img {
     background-color: #C84C67;
     border-radius: 30px;
     display: inline-block;
+    position: relative;
+    z-index: 2;
 
     &-padding {
         padding: 30px;
@@ -316,6 +320,7 @@ h2.section-title {
 .section-wrapper {
     flex: 1;
     position: relative;
+    z-index: -1;
 
     @include mq(sp) {
         @include sp_wrapper_p;

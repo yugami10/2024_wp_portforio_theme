@@ -17,5 +17,5 @@
             </li>
         <?php endfor; ?>
     </ul>
-    <?= includeButton(home_url('result'), 'もっと見る') ?>
+    <?= includeButton(home_url('results'), 'もっと見る') ?>
 </section>
