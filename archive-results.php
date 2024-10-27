@@ -20,11 +20,11 @@
             <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <!-- ループさせるコンテンツをここにいれる -->
                 <li class="result__item">
-                    <figure class="result__item_img_wrapper">
-                        <a href="<?= the_field('url') ?>" target="_blank">
+                    <a href="<?= the_field('url') ?>" target="_blank">
+                        <figure class="result__item_img_wrapper">
                             <img src="<?= the_field('site_top_img') ?>" alt="" />
-                        </a>
-                    </figure>
+                        </figure>
+                    </a>
                     <dl class="result__item_explains">
                         <dt>担当作業</dt>
                         <dd><?= the_field('work_in_charge') ?></dd>
@@ -32,8 +32,7 @@
                         <dd><?= the_field('production_method') ?></dd>
                     </dl>
                 </li>
-                <?php endwhile; endif; wp_reset_postdata(); ?>
-
+            <?php endwhile; endif; wp_reset_postdata(); ?>
             </ul>
         </section>
     </div>

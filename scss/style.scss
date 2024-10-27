@@ -363,6 +363,19 @@ h2.section-title {
         box-shadow: 2px 2px 4px 0 rgb(15, 87, 142, 50);
         border-radius: 10px;
         padding: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+        &_img_wrapper {
+            height: 500px;
+
+            img {
+                object-position: top;
+                border-radius: 10px;
+            }
+        }
     }
 
     &__item_explains {
