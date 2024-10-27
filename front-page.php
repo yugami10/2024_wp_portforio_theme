@@ -1,6 +1,6 @@
 <?= get_header() ?>
 
-<?= includeLoading(false) ?><?php //ここにローディング？？？ ?>
+<?= includeLoading(true) ?><?php //ここにローディング？？？ ?>
 
 <!-- gsapの練習用コンテンツ -->
 <!-- <div class="horizontal-content">
