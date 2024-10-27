@@ -344,6 +344,44 @@ h2.section-title {
     }
 }
 
+// 実績ページの画像共通部分
+@mixin common_result_img_wrapper {
+    height: 500px;
+
+    img {
+        object-position: top;
+        border-radius: 10px;
+    }
+}
+
+// TOPページの実績
+.preview_result {
+    max-width: 1000px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+
+        @include mq(sp) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        border-radius: 10px;
+        padding: 20px;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+
+        &_img_wrapper {
+            @include common_result_img_wrapper;
+        }
+    }
+}
+
 // 実績
 .result {
     max-width: 1000px;
@@ -369,12 +407,7 @@ h2.section-title {
         row-gap: 20px;
 
         &_img_wrapper {
-            height: 500px;
-
-            img {
-                object-position: top;
-                border-radius: 10px;
-            }
+            @include common_result_img_wrapper;
         }
     }
 
