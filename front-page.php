@@ -2,12 +2,7 @@
 
 <?= includeLoading(true) ?><?php //ここにローディング？？？ ?>
 
-<!-- gsapの練習用コンテンツ -->
-<!-- <div class="horizontal-content">
-    横に移動する内容
-</div> -->
-
-<main>
+<main class="before_load">
     <?= includeMainVisual() ?><?php //メインビジュアル ?>
 
     <div class="section-wrapper front-page-color">

@@ -130,6 +130,12 @@ img {
 .-rotate90 {
     transform: rotate(-90deg);
 }
+@mixin visible-h {
+    visibility: hidden;
+}
+.before_load {
+    @include visible-h;
+}
 
 // ヘッダー
 header {

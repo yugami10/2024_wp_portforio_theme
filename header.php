@@ -14,7 +14,7 @@
     <?= wp_head() ?>
 </html>
 
-<header>
+<header class="before_load">
     <div class="header">
         <div class="header__img_wrapper">
             <a href="<?= home_url() ?>">

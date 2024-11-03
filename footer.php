@@ -1,6 +1,6 @@
 <?= wp_footer() ?>
 
-<footer class="footer">
+<footer class="footer before_load">
     <!-- <div class="footer__left_pictures"></div> -->
     <div class="footer__content">
         <p>copyright</p>
