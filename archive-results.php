@@ -26,6 +26,8 @@
                         </figure>
                     </a>
                     <dl class="result__item_explains">
+                        <dt>概要</dt>
+                        <dd><?= the_field('summary') ?></dd>
                         <dt>担当作業</dt>
                         <dd><?= the_field('work_in_charge') ?></dd>
                         <dt>制作方法</dt>

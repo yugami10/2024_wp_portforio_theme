@@ -24,9 +24,9 @@
     <ul class="preview_result__list">
         <?php
             $preview_result_labels = [
-                1 => '家具サイト',
-                2 => 'カフェ',
-                3 => '旅行ブログ',
+                1 => '靴のサイト',
+                2 => '家具のサイト',
+                3 => 'カフェのサイト',
             ];
         ?>
         <?php for ($i=1; $i<=3; $i++) : ?>
