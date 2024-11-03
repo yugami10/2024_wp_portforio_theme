@@ -2,7 +2,7 @@
     <h2 class="section-title">自己紹介</h2>
     <div class="self-introduction__content_wrapper">
         <p class="self-introduction__content">
-            はじめまして。東京在住の山田です。
+            はじめまして。東京在住の馬場です。
             <br />
             過去、電気設計とwebアプリ開発のお仕事に従事してきました。
             <br />

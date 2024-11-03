@@ -7,7 +7,7 @@
 <?php endif; ?>
     <!-- <div class="footer__left_pictures"></div> -->
     <div class="footer__content">
-        <p>copyright</p>
+        <p>© 2024 baba</p>
     </div>
     <!-- <div class="footer__right_pictures"></div> -->
 </footer>
