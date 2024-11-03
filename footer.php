@@ -1,6 +1,10 @@
 <?= wp_footer() ?>
 
+<?php if (is_front_page()) : ?>
 <footer class="footer before_load">
+<?php else : ?>
+<footer class="footer">
+<?php endif; ?>
     <!-- <div class="footer__left_pictures"></div> -->
     <div class="footer__content">
         <p>copyright</p>

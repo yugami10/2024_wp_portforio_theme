@@ -2,7 +2,7 @@
     <div class="section-wrapper page-color">
         <section class="result section-self-style-left">
             <h2 class="section-title text-align-center">お問い合わせ</h2>
-            <div>
+            <div class="contact__list">
                 <?= do_shortcode( '[contact-form-7 id="ae762ee" title="お問い合わせページ"]' ) ?>
             </div>
         </section>

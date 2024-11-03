@@ -14,7 +14,11 @@
     <?= wp_head() ?>
 </html>
 
+<?php if (is_front_page()) : ?>
 <header class="before_load">
+<?php else : ?>
+<header>
+<?php endif; ?>
     <div class="header">
         <div class="header__img_wrapper">
             <a href="<?= home_url() ?>">

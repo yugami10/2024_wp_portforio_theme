@@ -88,6 +88,8 @@ body {
 
     // <header>の代わりに最下層に生地を敷き詰める
     background-color: #FAE2BE;
+
+    line-height: 1.7;
 }
 
 // 画面を縦に大きくしたときに謎の余白をうまないため
@@ -317,7 +319,7 @@ h2.section-title {
 {
     text-align: center;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 100px auto;
 }
 .section-self-style {
     // 横スクロールの重複用
@@ -399,6 +401,7 @@ h2.section-title {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 20px;
+        margin-top: 24px;
 
         @include mq(sp) {
             grid-template-columns: 1fr;
@@ -432,6 +435,13 @@ h2.section-title {
         dd {
             width: 60%;
         }
+    }
+}
+
+// お問い合わせ
+.contact {
+    &__list {
+        margin-top: 24px;
     }
 }
 
