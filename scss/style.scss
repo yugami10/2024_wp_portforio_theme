@@ -136,6 +136,9 @@ img {
 .before_load {
     @include visible-h;
 }
+.d-none {
+    display: none;
+}
 
 // ヘッダー
 header {

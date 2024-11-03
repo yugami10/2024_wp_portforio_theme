@@ -11,5 +11,9 @@ function DOMContentLoaded () {
         header?.classList.remove('before_load')
         main?.classList.remove('before_load')
         footer?.classList.remove('before_load')
+
+        setTimeout(() => {
+            spinner?.classList.add('d-none')
+        }, 1000);
     }, 2000);
 }
