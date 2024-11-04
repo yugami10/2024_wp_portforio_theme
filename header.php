@@ -38,6 +38,13 @@
         <nav class="header__nav">
             <ul>
                 <li>
+                    <?php if (is_front_page()) : ?>
+                        <span>TOP</span>
+                    <?php else : ?>
+                        <a href="<?= home_url() ?>">TOP</a>
+                    <?php endif; ?>
+                </li>
+                <li>
                     <?php if (is_archive('results')) : ?>
                         <span>実績</span>
                     <?php else : ?>
@@ -57,6 +64,13 @@
     <div class="hamburger_content hidden">
         <nav class="hamburger_nav">
             <ul>
+                <li>
+                    <?php if (is_front_page()) : ?>
+                        <span>TOP</span>
+                    <?php else : ?>
+                        <a href="<?= home_url() ?>">TOP</a>
+                    <?php endif; ?>
+                </li>
                 <li>
                     <?php if (is_archive('results')) : ?>
                         <span>実績</span>
