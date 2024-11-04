@@ -1,9 +1,6 @@
 <?php
     $is_loading = true;
-    if (
-        str_contains($_SERVER['HTTP_REFERER'] ?? '', home_url('results'))
-        || str_contains($_SERVER['HTTP_REFERER'] ?? '', home_url('contact'))
-    ) {
+    if (str_contains($_SERVER['HTTP_REFERER'] ?? '', home_url())) {
         $is_loading = false;
     }
 ?>
