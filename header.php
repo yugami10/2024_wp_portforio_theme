@@ -5,11 +5,11 @@
     <title><?= bloginfo('name') ?></title>
     <meta name="description" content="<?= bloginfo('description') ?>" />
 
-    <!-- noto sans font -->
+    <?php // noto sans font ?>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
-    <!-- CDN読込み -->
+    <?php // CDN読込み ?>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <?= wp_head() ?>
 </html>
@@ -18,11 +18,7 @@
     $is_loading = $args['is_loading'] ?? false;
 ?>
 
-<?php if (is_front_page() && $is_loading) : ?>
 <header class="before_load">
-<?php else : ?>
-<header>
-<?php endif; ?>
     <div class="header">
         <div class="header__img_wrapper">
             <a href="<?= home_url() ?>">

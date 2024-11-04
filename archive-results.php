@@ -20,7 +20,6 @@
             <h2 class="section-title text-align-center"><?= $titles['group_66dd39d36e75e'] ?></h2>
             <ul class="result__list">
             <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
-                <!-- ループさせるコンテンツをここにいれる -->
                 <li class="result__item">
                     <a class="img_zoom_in" href="<?= the_field('url') ?>" target="_blank">
                         <figure class="result__item_img_wrapper">
