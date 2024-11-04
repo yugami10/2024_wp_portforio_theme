@@ -17,8 +17,11 @@
 <?php
     $is_loading = $args['is_loading'] ?? false;
 ?>
-
+<?php if (is_page() || is_archive()) : ?>
+<header>
+<?php else : ?>
 <header class="before_load">
+<?php endif; ?>
     <div class="header">
         <div class="header__img_wrapper">
             <a href="<?= home_url() ?>">
