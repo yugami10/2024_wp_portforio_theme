@@ -508,15 +508,19 @@ h2.section-title {
         &__label {
             width: 40%;
             display: flex;
-            align-items: top;
+            align-items: center;
             @include mq(sp) {
                 width: 100%;
                 min-height: 30px;
             }
+
+            &.textarea {
+                align-items: flex-start;
+            }
         }
         &__input {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             width: 60%;
             @include mq(sp) {
                 align-items: center;
@@ -534,7 +538,7 @@ h2.section-title {
             input, textarea {
                 border: solid 1px #A3A3A3;
                 width: 100%;
-                padding: 10px 30px;
+                padding: 10px;
                 outline: 0;
                 background-color: #fff;
 
