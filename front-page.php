@@ -19,7 +19,7 @@
     <div class="section-wrapper front-page-color">
         <!-- クラゲぷかぷか -->
         <div class="kurage-wrapper">
-            <img src="<?= get_template_directory_uri() . "/images/kurage.png" ?>" alt="ぷかぷかするクラゲ" />
+            <img class="pointer-non" src="<?= get_template_directory_uri() . "/images/kurage.png" ?>" alt="ぷかぷかするクラゲ" />
         </div>
 
         <?= includeAbilistySection() ?><?php // 「できること」セクション ?>
@@ -27,7 +27,7 @@
 
         <!-- クラゲぷかぷか -->
         <div class="kurage-wrapper-right">
-            <img src="<?= get_template_directory_uri() . "/images/kurage.png" ?>" alt="ぷかぷかするクラゲ" />
+            <img class="pointer-non" src="<?= get_template_directory_uri() . "/images/kurage.png" ?>" alt="ぷかぷかするクラゲ" />
         </div>
 
         <?= includeSelfIntroductionSection() ?><?php // 「自己紹介」セクション ?>
@@ -35,14 +35,14 @@
 
         <!-- およぐおさかなくん -->
         <div class="sakana-wrapper">
-            <img src="<?= get_template_directory_uri() . "/images/sakana.png" ?>" alt="泳ぐ魚" />
+            <img class="pointer-non" src="<?= get_template_directory_uri() . "/images/sakana.png" ?>" alt="泳ぐ魚" />
         </div>
 
         <!-- わかめ？？？？？？？？？？ -->
         <div class="wakame-group">
             <?php for ($wakame_i = 0; $wakame_i < 2; $wakame_i++) : ?>
                 <div class="wakame-wrapper">
-                    <img src="<?= get_template_directory_uri() . "/images/wakame.png" ?>" alt="背景のわかめ" />
+                    <img class="pointer-non" src="<?= get_template_directory_uri() . "/images/wakame.png" ?>" alt="背景のわかめ" />
                 </div>
             <?php endfor; ?>
         </div>

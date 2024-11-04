@@ -15,7 +15,7 @@
         <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
             <li class="preview_result__item">
                 <span><?= the_field('summary') ?></span>
-                <a href="<?= the_field('url') ?>">
+                <a class="img_zoom_in" href="<?= the_field('url') ?>">
                     <figure class="preview_result__item_img_wrapper">
                         <img src="<?= the_field('site_top_img') ?>" alt="" />
                     </figure>

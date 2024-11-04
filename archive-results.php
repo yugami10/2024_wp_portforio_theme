@@ -22,7 +22,7 @@
             <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <!-- ループさせるコンテンツをここにいれる -->
                 <li class="result__item">
-                    <a href="<?= the_field('url') ?>" target="_blank">
+                    <a class="img_zoom_in" href="<?= the_field('url') ?>" target="_blank">
                         <figure class="result__item_img_wrapper">
                             <img src="<?= the_field('site_top_img') ?>" alt="" />
                         </figure>
