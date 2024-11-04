@@ -44,7 +44,7 @@ TL.add(() => {
     .add(() => {
     sakana?.classList.add('-rotate90');
 })
-    .to(sakana_wrapper, { top: "100vh", duration: 1.5 })
+    .to(sakana_wrapper, { top: "calc(100% - 400px)", duration: 1.5 })
     .add(() => {
     sakana?.classList.remove('-rotate90');
     sakana?.classList.remove('reverse-x');
