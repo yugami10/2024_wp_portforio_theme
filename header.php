@@ -14,7 +14,11 @@
     <?= wp_head() ?>
 </html>
 
-<?php if (is_front_page()) : ?>
+<?php
+    $is_loading = $args['is_loading'] ?? false;
+?>
+
+<?php if (is_front_page() && $is_loading) : ?>
 <header class="before_load">
 <?php else : ?>
 <header>

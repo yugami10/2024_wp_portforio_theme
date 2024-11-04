@@ -1,8 +1,22 @@
-<?= get_header() ?>
+<?php
+    $is_loading = true;
+    if (
+        str_contains($_SERVER['HTTP_REFERER'] ?? '', home_url('results'))
+        || str_contains($_SERVER['HTTP_REFERER'] ?? '', home_url('contact'))
+    ) {
+        $is_loading = false;
+    }
+?>
 
-<?= includeLoading(true) ?><?php //ここにローディング？？？ ?>
+<?= get_header(null, ['is_loading' => $is_loading]) ?>
 
+<?= includeLoading($is_loading) ?><?php //ここにローディング？？？ ?>
+
+<?php if ($is_loading) : ?>
 <main class="before_load">
+<?php else : ?>
+<main>
+<?php endif; ?>
     <?= includeMainVisual() ?><?php //メインビジュアル ?>
 
     <div class="section-wrapper front-page-color">
@@ -38,4 +52,4 @@
     </div>
 </main>
 
-<?= get_footer() ?>
+<?= get_footer(null, ['is_loading' => $is_loading]) ?>

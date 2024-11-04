@@ -1,6 +1,10 @@
 <?= wp_footer() ?>
 
-<?php if (is_front_page()) : ?>
+<?php
+    $is_loading = $args['is_loading'] ?? false;
+?>
+
+<?php if (is_front_page() && $is_loading) : ?>
 <footer class="footer before_load">
 <?php else : ?>
 <footer class="footer">
