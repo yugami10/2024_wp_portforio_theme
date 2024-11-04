@@ -1,42 +1,27 @@
-<!-- <section class="result section-self-style">
-    <h2 class="section-title">実績</h2>
-    <ul class="result__list">
-        <?php
-            $result_labels = [
-                1 => '家具サイト',
-                2 => 'カフェ',
-                3 => '旅行ブログ',
-            ];
-        ?>
-        <?php for ($i=1; $i<=3; $i++) : ?>
-            <li class="result__item">
-                <span><?= $result_labels[$i] ?></span>
-                <figure class="result__item_img_wrapper">
-                    <img src="<?= get_template_directory_uri() . "/images/jisseki_{$i}.jpg" ?>" alt="実績のポートフォリオサイト<?= $i ?>" />
-                </figure>
-            </li>
-        <?php endfor; ?>
-    </ul>
-    <?= includeButton(home_url('results'), 'もっと見る') ?>
-</section> -->
+<?php
+    $wp_query = new WP_Query();
+    $my_posts = array(
+        'orderby' => 'date',
+        'order' => 'DESC',
+        'post_type' => 'results',// 投稿タイプを設定
+        'posts_per_page' => '3',// 表示する記事数を設定
+    );
+    $wp_query->query($my_posts);
+?>
+
 <section class="preview_result section-self-style">
     <h2 class="section-title">実績</h2>
     <ul class="preview_result__list">
-        <?php
-            $preview_result_labels = [
-                1 => '靴のサイト',
-                2 => '家具のサイト',
-                3 => 'カフェのサイト',
-            ];
-        ?>
-        <?php for ($i=1; $i<=3; $i++) : ?>
+        <?php if ($wp_query->have_posts()) : while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
             <li class="preview_result__item">
-                <span><?= $preview_result_labels[$i] ?></span>
-                <figure class="preview_result__item_img_wrapper">
-                    <img src="<?= get_template_directory_uri() . "/images/jisseki_{$i}.jpg" ?>" alt="実績のポートフォリオサイト<?= $i ?>" />
-                </figure>
+                <span><?= the_field('summary') ?></span>
+                <a href="<?= the_field('url') ?>">
+                    <figure class="preview_result__item_img_wrapper">
+                        <img src="<?= the_field('site_top_img') ?>" alt="" />
+                    </figure>
+                </a>
             </li>
-        <?php endfor; ?>
+        <?php endwhile; endif; wp_reset_postdata(); ?>
     </ul>
     <?= includeButton(home_url('results'), 'もっと見る') ?>
 </section>

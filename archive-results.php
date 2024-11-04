@@ -3,6 +3,8 @@
 <?php
     $wp_query = new WP_Query();
     $my_posts = array(
+        'orderby' => 'date',
+        'order' => 'DESC',
         'post_type' => 'results',// 投稿タイプを設定
         'posts_per_page' => '10',// 表示する記事数を設定
     );
